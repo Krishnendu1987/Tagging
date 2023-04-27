@@ -14,12 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
+      - name: Create tag
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-      
+          git tag -a v${{ github.run_number }} -m "Auto-tagged by GitHub Actions"
+          git push origin v${{ github.run_number }}
+
