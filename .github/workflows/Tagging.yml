@@ -16,4 +16,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.Access_Token }}
         WITH_V: true
+    - uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.Access_Token }}"
+        tag_prefix: "main_"
         tag_prefix: "main_"
