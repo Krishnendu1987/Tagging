@@ -16,3 +16,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.Access_Token }}
         WITH_V: true
+        tag_prefix: "main_"
