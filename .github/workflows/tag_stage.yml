@@ -1,18 +1,18 @@
 name: Tag Creation For Stage
 
 on:
-push:
-    branches:[ "stage" ]
-
+  push:
+    branches: 
+      - "stage"
   workflow_dispatch:
 
 jobs:
   build:
     if: github.repository == 'branching_strategy'
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Create tag
         run: |
           git tag -a v${{ github.run_number }} -m "Auto-tagged by GitHub Actions"
