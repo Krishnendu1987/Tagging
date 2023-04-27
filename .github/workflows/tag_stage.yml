@@ -13,7 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create tag
-        run: |
-          git tag -a v${{ github.run_number }} -m "Auto-tagged by GitHub Actions"
-          git push origin v${{ github.run_number }}
+        
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.61.0 # Don't use @master unless you're happy to test the latest version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: false
