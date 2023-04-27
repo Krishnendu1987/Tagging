@@ -2,7 +2,7 @@ name: Bump version
 on:
   push:
     branches:
-      - Stage
+      - main
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -19,5 +19,4 @@ jobs:
     - uses: Klemensas/action-autotag@stable
       with:
         GITHUB_TOKEN: "${{ secrets.Access_Token }}"
-        tag_prefix: "main_"
         tag_prefix: "main_"
