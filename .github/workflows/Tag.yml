@@ -1,0 +1,21 @@
+name: Tag Creation
+
+on:
+  push:
+    branches:
+      - 'stage'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.repository == 'branching_strategy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+
