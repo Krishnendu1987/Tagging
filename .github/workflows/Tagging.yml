@@ -1,23 +1,15 @@
-name: Tag_creation
+name: Create Tag
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: Klemensas/action-autotag@stable
       with:
-        fetch-depth: '0'
-
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.61.0 
-      env:
-        GITHUB_TOKEN: ${{ secrets.Access_Token }}
-        WITH_V: false
-    - uses: anothrNick/github-tag-action@1.61.0 
-      with:
-        GITHUB_TOKEN: "${{ secrets.Access_Token }}"
-        WITH_V: false
-        tag_prefix: "main_"
+        GITHUB_TOKEN: "${{ secrets.Acess_Token }}"
