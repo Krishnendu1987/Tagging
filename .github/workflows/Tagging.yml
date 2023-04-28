@@ -12,4 +12,4 @@ jobs:
     - uses: actions/checkout@v3
     - uses: anothrNick/github-tag-action@1.61.0 
       with:
-        GITHUB_TOKEN: "${{ secrets.Acess_Token }}"
+        GITHUB_TOKEN: "${{ secrets.Access_Token }}"
