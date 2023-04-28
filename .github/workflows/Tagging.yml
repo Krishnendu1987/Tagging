@@ -14,5 +14,9 @@ jobs:
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.61.0 # Don't use @master unless you're happy to test the latest version
       env:
-        GITHUB_TOKEN: ${{ secrets.Access_Token }}
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         WITH_V: false
+    - uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
+        tag_prefix: "v21_"
