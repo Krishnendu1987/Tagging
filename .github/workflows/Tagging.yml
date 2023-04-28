@@ -1,4 +1,4 @@
-name: Tag version2
+name: Tag_version2
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         WITH_V: false
-        tag_prefix: "v21_"
+        #tag_prefix: "v21_"
     #- uses: anothrNick/github-tag-action@1.61.0
       #with:
         #GITHUB_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
