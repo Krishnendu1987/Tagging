@@ -1,4 +1,4 @@
-name: Tag version
+name: Tag version1
 on:
   push:
     branches:
