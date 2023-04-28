@@ -15,8 +15,8 @@ jobs:
       uses: anothrNick/github-tag-action@1.61.0 # Don't use @master unless you're happy to test the latest version
       env:
         GITHUB_TOKEN: ${{ secrets.Access_Token }}
-        WITH_V: true
-    - uses: anothrNick/github-tag-action@1.61.0 
-      with:
-        GITHUB_TOKEN: "${{ secrets.Access_Token }}"
-        tag_prefix: "main_"
+        WITH_V: false
+    #- uses: anothrNick/github-tag-action@1.61.0 
+      #with:
+        #GITHUB_TOKEN: "${{ secrets.Access_Token }}"
+        #tag_prefix: "main_"
