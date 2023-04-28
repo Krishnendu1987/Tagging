@@ -1,6 +1,9 @@
 name: Manual_trigger
 on:
-  workflow_dispatch
+  #workflow_dispatch
+  push:
+    branches:
+      - Stage
 jobs:
   build:
     runs-on: ubuntu-22.04
