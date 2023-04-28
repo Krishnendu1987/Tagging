@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-      - QA
       - Stage
+      - QA
 jobs:
   build:
     runs-on: ubuntu-22.04
