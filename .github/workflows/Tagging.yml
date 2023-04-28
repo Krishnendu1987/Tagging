@@ -1,6 +1,5 @@
 name: Manual_trigger
 on:
-  #workflow_dispatch
   push:
     branches:
       - Stage
