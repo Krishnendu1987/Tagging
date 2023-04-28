@@ -1,4 +1,4 @@
-name: Tag_creation
+name: Tag creation
 on:
   push:
     branches:
@@ -12,6 +12,7 @@ jobs:
         fetch-depth: '0'
 
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.61.0 
+      uses: anothrNick/github-tag-action@1.61.0 # Don't use @master unless you're happy to test the latest version
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        WITH_V: false
