@@ -2,7 +2,7 @@ name: Manual_trigger
 on:
   push:
     branches:
-      - Stage
+      - main
 jobs:
   build:
     runs-on: ubuntu-22.04
