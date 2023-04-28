@@ -2,7 +2,7 @@ name: Tag version2
 on:
   push:
     branches:
-      - stage
+      - main
 jobs:
   build:
     runs-on: ubuntu-22.04
