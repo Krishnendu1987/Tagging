@@ -1,8 +1,6 @@
-name: Tag_version2
+name: Manual_trigger
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-22.04
