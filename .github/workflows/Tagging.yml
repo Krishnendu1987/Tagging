@@ -16,7 +16,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.Access_Token }}
         WITH_V: false
-    #- uses: anothrNick/github-tag-action@1.61.0 
-      #with:
-        #GITHUB_TOKEN: "${{ secrets.Access_Token }}"
-        #tag_prefix: "main_"
+    - uses: anothrNick/github-tag-action@1.61.0 
+      with:
+        GITHUB_TOKEN: "${{ secrets.Access_Token }}"
+        tag_prefix: "main_"
