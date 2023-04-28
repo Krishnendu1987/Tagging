@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: Klemensas/action-autotag@stable
+    - uses: anothrNick/github-tag-action@1.61.0 
       with:
         GITHUB_TOKEN: "${{ secrets.Acess_Token }}"
